@@ -27,15 +27,32 @@ const Stack = (props) => {
   return (
     <View style={styles.contenedor}>
       <Text style={styles.label}>{props.label}</Text>
-      <View style={[styles.setBorders,styles.setHorizontal]}>
-        <Text style={styles.inputText}>$</Text>
-        <TextInput
-          style={styles.input}
-          value={valorInput}
-          editable={false}
-          onChangeText= {texto => inputValor(texto)}
-        />
-      </View>
+
+        { props.monto ? (
+          <>
+          <View style={[styles.setBorders,styles.setHorizontal]}>
+            <Text style={styles.inputText}>$</Text>
+            <TextInput
+              style={styles.input}
+              value={valorInput}
+              editable={false}
+              onChangeText= {texto => inputValor(texto)}
+            />
+          </View>
+          </>
+        ) : (
+          <>
+          <View style={styles.setBorders}>
+            <TextInput
+              style={styles.input}
+              value={valorInput}
+              editable={false}
+              onChangeText= {texto => inputValor(texto)}
+            />
+          </View>
+          </>
+        )}
+
 
       <Slider
       style={styles.slider}
@@ -70,6 +87,7 @@ const styles = StyleSheet.create({
     fontSize: 21,
     fontWeight: 'bold',
     marginRight: 5,
+    alignSelf: "center"
   },
   input: {
     color: '#FFFFFF',
