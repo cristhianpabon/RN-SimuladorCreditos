@@ -15,6 +15,7 @@
 * Dependencias implementadas
   * [react-native-community/slider](https://github.com/react-native-community/react-native-slider) (Componentes Sliders)
   * [react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient) (Degradado de fondos)
+* Uso de Fuente Personalizada [**Monserrat**](https://fonts.google.com/specimen/Montserrat)
   
 ## Getting Started  
 
