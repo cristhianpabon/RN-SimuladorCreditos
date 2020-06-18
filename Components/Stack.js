@@ -86,8 +86,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 21,
     fontWeight: 'bold',
-    marginRight: 5,
-    alignSelf: "center"
+    alignSelf: "center",
   },
   input: {
     color: '#FFFFFF',
@@ -105,7 +104,7 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     marginBottom: 20,
     paddingHorizontal: 30,
-    paddingVertical: 5,
+    paddingVertical: Platform.OS === 'ios' ? 10 : 0,
   },
   setHorizontal: {
     flexDirection: 'row',
